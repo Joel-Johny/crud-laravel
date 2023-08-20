@@ -9,6 +9,10 @@ class Formsubmit extends Controller
     //
     
     public function index(Request $request){
-        return $request->post();
+         $request->validate([
+            "name"=>"required",
+            "email"=>"required",
+            "phone"=>"required",
+         ]);
     }
 }

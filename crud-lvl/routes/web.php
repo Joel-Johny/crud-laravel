@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\page1;
 use App\Http\Controllers\page2;
 use App\Http\Controllers\Formsubmit;
-use App\Http\Middleware;
+use App\Http\Middleware\balance;
 
 /*
 |--------------------------------------------------------------------------
