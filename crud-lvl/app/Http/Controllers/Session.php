@@ -23,6 +23,6 @@ class Session extends Controller
 
     public function forgetMe(Request $r){
         echo "inside forgetMe function";
-        echo $r->session()->forget("name");
+        $r->session()->forget("name");
     }
 }
