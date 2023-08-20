@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\page1;
+use App\Http\Controllers\page2;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/page1', function () {
+//     return view('page1');
+// });
+// Route::get('/page1','page1@index' );old way
+Route::get('/page1', [page1::class,'index']);
+Route::get('/page2', [Page2::class,'index']);
