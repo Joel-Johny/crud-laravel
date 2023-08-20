@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\page1;
 use App\Http\Controllers\page2;
 use App\Http\Controllers\Formsubmit;
+use App\Http\Controllers\Session;
 use App\Http\Middleware\balance;
 
 /*
@@ -33,3 +34,6 @@ Route::post('/formSubmit', [Formsubmit::class,'index']);
 
 Route::view('deny','deny');
 
+Route::get('/set_sess', [Session::class,'setMe']);
+Route::get('/get_sess', [Session::class,'getMe']);
+Route::get('/forget_sess', [Session::class,'forgetMe']);
